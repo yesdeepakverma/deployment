@@ -1,0 +1,9 @@
+[Unit]
+Description=gunicorn daemon
+After=network.target
+[Service]
+User=www-data
+Group=www-data
+ExecStart=/code/deploy/gunicorn.sh
+[Install]
+WantedBy=multi-user.target
